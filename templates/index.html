@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    th, td {
+        border:3px solid black;
+    }
+    td {
+        text-align: center;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <table style="display: flex; justify-content: center; margin: 10rem; ">
+        <tr>
+            <th style="width: 150px;">ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>nvestments</th>
+        </tr>
+
+        {%for kun, value in context.items%}
+        <tr>
+            <td>{{kun}}</td>
+            {%for dars in value%}
+            <td>{{dars}}</td>
+            {%endfor%}
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
